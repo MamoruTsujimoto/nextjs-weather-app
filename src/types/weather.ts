@@ -1,5 +1,6 @@
 type WeatherType = {
   current: {
+    dt: number
     temp: number
     clouds: number
     weather: [

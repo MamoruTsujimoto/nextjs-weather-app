@@ -749,11 +749,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/mandali@^4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/mandali/-/mandali-4.5.2.tgz#88d060dd0b851bfeac75611b5cc9a7e8f7742178"
-  integrity sha512-TUJ+/5+vCXsiz0cvmRYpp9JMWFkadUPMDOmYFlsAV0JTOgw0YUptVxCsvbM/2k0nbN4CQC8rSQS+uN6uiK0X/g==
-
 "@fontsource/raleway@^4.5.3":
   version "4.5.3"
   resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.5.3.tgz#0a4477e037dbd9a4a26c1c9db3aa2bf93722b499"

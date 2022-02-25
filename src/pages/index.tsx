@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import { Box, Center, Flex, Text } from '@chakra-ui/react'
+import { fromUnixTime, format } from 'date-fns'
 import WeatherType from '../types/weather'
 
 type Props = {
@@ -11,12 +12,13 @@ const Home: NextPage<Props> = ({ weatherData }) => {
   const currentWeatherMain = weatherData.current.weather[0].main
   const currentWeatherTemp = Math.trunc(weatherData.current.temp)
   const currentWeatherIcon = weatherData.current.weather[0].icon + '@2x.png'
-  console.log(weatherData)
+  const currentWeatherDate = format(fromUnixTime(weatherData.current.dt), 'LLLL d, yyyy')
+
   return (
     <>
       <Center h='100vh'>
         <Box w={200} h={200} bg='gray.500' color='white' boxShadow='md' borderRadius='lg' overflow='hidden'>
-          <Center marginTop='40px'>
+          <Center marginTop='20px'>
             <Image
               src={`http://openweathermap.org/img/wn/${currentWeatherIcon}`}
               width='64'
@@ -24,7 +26,8 @@ const Home: NextPage<Props> = ({ weatherData }) => {
               alt={currentWeatherMain}
             />
           </Center>
-          <Center marginBottom='10px'>Uruma</Center>
+          <Center marginBottom='10px'>{currentWeatherDate}</Center>
+          <Center>Uruma</Center>
           <Center>
             <Text fontSize='2xl'>{currentWeatherTemp}˚</Text>
           </Center>
@@ -49,7 +52,7 @@ export const getStaticProps = async () => {
     props: {
       weatherData,
     },
-    revalidate: 60,
+    revalidate: 120,
   }
 }
 
