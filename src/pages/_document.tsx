@@ -15,8 +15,8 @@ export default class Document extends NextDocument {
           <meta property='og:url' content='https://nextjs-weather-app-chi.vercel.app/' />
           <meta property='og:title' content='NextJS Weather APP' />
           <meta property='og:description' content='Experimental site using Nextjs and OpenWeather API' />
-          <meta property='og:image' content='/nextjs-weather-app.jpg' />
-          <meta name='twitter:card' content='/nextjs-weather-app.jpg' />
+          <meta property='og:image' content='https://nextjs-weather-app-chi.vercel.app/nextjs-weather-app.jpg' />
+          <meta name='twitter:card' content='https://nextjs-weather-app-chi.vercel.app/nextjs-weather-app.jpg' />
           <meta name='mobile-web-app-capable' content='yes' />
           <meta name='apple-mobile-web-app-capable' content='yes' />
           <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
