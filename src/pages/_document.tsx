@@ -6,6 +6,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang='ja'>
         <Head prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#'>
+          <meta name="robots" content="noindex" />
           <meta name='theme-color' content='#ffffff' />
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

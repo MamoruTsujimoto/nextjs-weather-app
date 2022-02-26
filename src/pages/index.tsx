@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
 import Image from 'next/image'
-import { Box, Center, Flex, Text } from '@chakra-ui/react'
+import { Box, Center, Text } from '@chakra-ui/react'
 import { fromUnixTime, format } from 'date-fns'
 import WeatherType from '../types/weather'
 
@@ -16,6 +17,9 @@ const Home: NextPage<Props> = ({ weatherData }) => {
 
   return (
     <>
+      <Head>
+        <title>NextJS Weather APP</title>
+      </Head>
       <Center h='100vh'>
         <Box w={200} h={200} bg='gray.500' color='white' boxShadow='md' borderRadius='lg' overflow='hidden'>
           <Center marginTop='20px'>
